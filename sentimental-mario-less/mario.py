@@ -1,0 +1,15 @@
+# TODO
+from cs50 import get_int
+
+# while loop for correct input
+while True:
+    height = get_int("Height: ")
+    if height > 0 and height < 9:
+        break
+    # print out hashes
+for row in range(height):
+    for space in range(height - row - 1, 0, -1):
+        print(" ", end="")
+    for hash in range(row + 1):
+        print("#", end="")
+    print("\n", end="")
